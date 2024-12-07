@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Resume and Biodata</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #444;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+
+       /* For Contact and Personal Details Section */
+.contact, .personal-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Consistent gap between items */
+}
+
+.contact div, .personal-details div {
+    flex: 1 1 45%; /* Makes each div take up 45% of the container width */
+    display: flex;
+    align-items: center; /* Aligns icons and text vertically */
+    gap: 10px; /* Spacing between icon and text */
+}
+
+.contact a, .personal-details a {
+    color: #4CAF50; /* Link color */
+    text-decoration: underline; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact a:hover, .personal-details a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #4CAF50; /* Change color on hover */
+}
+
+/* Icon Styling */
+.contact i, .personal-details i {
+    font-size: 1rem; /* Icon size */
+    color: #4CAF50; /* Icon color */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .contact div, .personal-details div {
+        flex: 1 1 100%; /* Stack items vertically on smaller screens */
+    }
+
+    .contact {
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+}
+
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        ul li:before {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .contact, .personal-details {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shreeshail S P</h1>
+            <p>Full Stack Developer</p>
+        </header>
+
+        <div class="section contact">
+            <h2>Contact Information</h2>
+            <div></div>
+            <div>
+                <i class="fas fa-envelope"></i> <strong>Email:</strong> 
+                <a href="mailto:shpa22cs@cmrit.ac.in">shpa22cs@cmrit.ac.in</a>
+            </div>
+            <div>
+                <i class="fas fa-phone"></i> <strong>Phone:</strong> +91-8277220852
+            </div>
+            <div>
+                <i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Street, City, Country
+            </div>
+            <div>
+                <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> 
+                <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Personal Details</h2>
+            <div class="personal-details">
+                <div><strong>Father's Name:</strong> Shivappa</div>
+                <div><strong>Date of Birth:</strong> July 20, 2004</div>
+                <div><strong>Gender:</strong> Male</div>
+                <div><strong>Nationality:</strong> INDIAN</div>
+                <div><strong>Marital Status:</strong> Single</div>
+                <div><strong>Languages:</strong> Kannada,English, Hindi</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Master's Degree:</strong> Computer Science, XYZ University (2020)</li>
+                <li><strong>Bachelor's Degree:</strong> Information Technology, ABC University (2018)</li>
+                <li><strong>High School:</strong> DEF High School (2014)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>JavaScript, React, Node.js</li>
+                <li>HTML, CSS, SASS</li>
+                <li>Python, Django</li>
+                <li>MySQL, MongoDB</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Software Engineer at ABC Corp (2021-Present):</strong> Developed web applications, optimized APIs, and led team projects.</li>
+                <li><strong>Intern at XYZ Inc (2020-2021):</strong> Contributed to front-end development and data visualization dashboards.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Photography</li>
+                <li>Traveling</li>
+                <li>Reading</li>
+            </ul>
+        </div>
+
+       <footer>
+            &copy; 2024 Shreeshail . All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

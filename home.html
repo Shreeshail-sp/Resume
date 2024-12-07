@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .link {
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link:hover {
+            background-color: #333;
+        }
+
+        .about {
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: left;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .showcase {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .showcase-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .showcase-item i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .showcase-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .showcase-item p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work, skills, and achievements. Dive into my Resume or Biodata!</p>
+        <div class="links">
+            <a href="resume.html" class="link"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="biodata.html" class="link"><i class="fas fa-user"></i> Biodata</a>
+        </div>
+
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am Shreeshail S P, a passionate software developer with expertise in front-end and back-end technologies. 
+                I love solving problems and building user-friendly applications. 
+                My work revolves around creating impactful solutions that merge functionality with beautiful design.
+            </p>
+        </div>
+
+        <div class="showcase">
+            <div class="showcase-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Projects</h3>
+                <p>View a collection of personal and professional projects that demonstrate my skills.</p>
+            </div>
+            <div class="showcase-item">
+                <i class="fas fa-award"></i>
+                <h3>Achievements</h3>
+                <p>Learn about my professional milestones and recognitions.</p>
+            </div>
+            <div class="showcase-item">
+                <i class="fas fa-brain"></i>
+                <h3>Skills</h3>
+                <p>Discover the technical expertise and tools I excel at using.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Shreeshail . All rights reserved.
+    </footer>
+</body>
+</html>
