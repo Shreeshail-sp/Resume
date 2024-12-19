@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Resume and Biodata</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: white;
+            padding: 40px;
+            margin: -40px -40px 40px -40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(45deg, #4CAF50, #2196F3);
+            border-image-slice: 1;
+        }
+        
+
+       /* For Contact and Personal Details Section */
+.contact, .personal-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contact div, .personal-details div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background: rgba(76, 175, 80, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact div i, .personal-details div i {
+    grid-row: 1 / span 2;
+    font-size: 1.2rem;
+    color: #4CAF50;
+    width: 24px;
+    text-align: center;
+}
+
+.contact div strong, .personal-details div strong {
+    grid-column: 2;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.contact div span, 
+.contact div a, 
+.personal-details div span {
+    grid-column: 2;
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact div a {
+    color: #2196F3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact div a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+.contact div:hover, .personal-details div:hover {
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact, .personal-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact div, .personal-details div {
+        padding: 12px;
+    }
+}
+
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        ul li:before {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: white;
+            margin: 40px -40px -40px -40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .contact, .personal-details {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Enhanced list items */
+        ul li:before {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Updated Skills section styles */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(76, 175, 80, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag i {
+            color: #4CAF50;
+            font-size: 1.2rem;
+        }
+
+        .skill-tag:hover {
+            background: rgba(76, 175, 80, 0.2);
+            transform: translateX(5px);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shreeshail S P</h1>
+            <p>Full Stack Developer</p>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="section">
+                <h2>Contact Information</h2>
+                <div class="contact">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <strong>Email</strong>
+                        <a href="mailto:shpa22cs@cmrit.ac.in">shpa22cs@cmrit.ac.in</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <strong>Phone</strong>
+                        <span>+91-8277220852</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>Address</strong>
+                        <span>AECS Layout, Bangalore - 560037</span>
+                    </div>
+                    <div>
+                        <i class="fab fa-linkedin"></i>
+                        <strong>LinkedIn</strong>
+                        <a href="https://shorturl.at/1jgPX" target="_blank">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Bachelor's Degree:</strong> Computer Science And Engineering<br>
+                        CMR Institute Of Technology, VTU University<br>
+                        <small>2022 - 2026</small>
+                    </li>
+                    <li>
+                        <strong>Pre-University:</strong> PCMB<br>
+                        Ambika PU College, Bappalige<br>
+                        <small>2020 - 2022</small>
+                    </li>
+                    <li>
+                        <strong>High School</strong><br>
+                        Shri Sharada English Medium High School<br>
+                        <small>Completed 2020</small>
+                    </li></ul>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    
+                    
+                    <div class="skill-tag">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    
+                    <div class="skill-tag">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-code"></i>
+                        <span>Django</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Ecommerce Website :</strong> An Website to buy your favorite products</li>
+                    <li><strong>ChatBot:</strong>  An AI chatbot to help you with your queries</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Photography</li>
+                    <li>Traveling</li>
+                    <li>BGMI</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2024 Shreeshail . All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

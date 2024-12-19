@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 40px;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: none;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4CAF50;
+            text-transform: uppercase;
+        }
+
+        .personal-info {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: grid;
+            gap: 20px;
+        }
+
+        .personal-info div {
+            flex: unset;
+            background: rgba(76, 175, 80, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .hobbies ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .hobbies ul li {
+            margin-bottom: 8px;
+        }
+
+        .hobbies ul li::before {
+            content: "\f0c8"; /* Font Awesome Square */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            color: #4CAF50;
+            justify-content: left;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: white;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 20px;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Timeline for education */
+        .education-timeline {
+            margin-left: 20px;
+        }
+
+        .education-timeline li {
+            padding: 20px;
+            background: rgba(76, 175, 80, 0.05);
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shreeshail S P</h1>
+            <p>Explore My World</p>
+        </header>
+
+        <div class="content-wrapper">
+            <section>
+                <h2>Personal Information</h2>
+                <div class="personal-info">
+                    <div><strong>Father's Name:</strong> Shivappa</div>
+                    <div><strong>Mother's Name:</strong> Shreeshail S P</div>
+                    <div><strong>Date of Birth:</strong> July 20, 2004</div>
+                    <div><strong>Gender:</strong> Male</div>
+                    <div><strong>Nationality:</strong> INDIAN</div>
+                    <div><strong>Marital Status:</strong> Single</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <ul class="education-timeline">
+                    <li>
+                        <strong>Bachelor's Degree:</strong> Computer Science And Engineering<br>
+                        CMR Institute Of Technology, VTU University<br>
+                        <small>2022 - 2026</small>
+                    </li>
+                    <li>
+                        <strong>Pre-University:</strong> PCMB<br>
+                        Ambika PU College, Bappalige<br>
+                        <small>2020 - 2022</small>
+                    </li>
+                    <li>
+                        <strong>High School:</strong><br>
+                        Shri Sharada English Medium High School<br>
+                        <small>Completed 2020</small>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Hobbies</h2>
+                <ul class="hobbies">
+                    <li>Photography</li><br>
+                    <li>Traveling</li><br>
+                    <li>Reading</li><br>
+                    <li>Playing</li><br>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Social Links</h2>
+                <div class="social-links">
+                    <a href="https://shorturl.at/1jgPX" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Shreeshail-sp" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:shpa22cs@cmrit.ac.in">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+                
+            </section>
+        </div>
+
+        <footer>
+            &copy; 2024 Shreeshail . All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

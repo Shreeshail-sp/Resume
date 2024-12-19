@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0 40px;
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .link:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #2196F3, #4CAF50);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .link:hover:before {
+            opacity: 1;
+        }
+
+        .link i {
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .showcase-item {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .showcase-item i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .showcase-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .showcase-item p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my work, skills, and achievements. Dive into my Resume or Biodata!</p>
+        </header>
+
+        <div class="links">
+            <a href="resume.html" class="link">
+                <i class="fas fa-file-alt"></i>
+                <span>View Resume</span>
+            </a>
+            <a href="biodata.html" class="link">
+                <i class="fas fa-user"></i>
+                <span>View Biodata</span>
+            </a>
+        </div>
+
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am Shreeshail S P, a passionate software developer with expertise in front-end and back-end technologies. 
+                I love solving problems and building user-friendly applications. 
+                My work revolves around creating impactful solutions that merge functionality with beautiful design.
+            </p>
+        </div>
+
+        <div class="showcase">
+            <div class="showcase-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Projects</h3>
+                <p>View a collection of personal and professional projects that demonstrate my skills.</p>
+            </div>
+            <div class="showcase-item">
+                <i class="fas fa-award"></i>
+                <h3>Achievements</h3>
+                <p>Learn about my professional milestones and recognitions.</p>
+            </div>
+            <div class="showcase-item">
+                <i class="fas fa-brain"></i>
+                <h3>Skills</h3>
+                <p>Discover the technical expertise and tools I excel at using.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Shreeshail . All rights reserved.
+    </footer>
+
+    <button class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.querySelector('.scroll-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
